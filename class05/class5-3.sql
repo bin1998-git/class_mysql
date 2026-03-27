@@ -34,7 +34,7 @@ flush privileges; -- 바로적용 명령어
 
 
 -- 3. 권한 회수
-revoke all privileges on school.* FROM 'tenco'@'localhost';
-revoke all privileges on school.* FROM 'tenco'@'%';
+revoke all privileges on *.* FROM 'tenco'@'localhost';
+revoke all privileges on *.* FROM 'tenco'@'%';
 
 
