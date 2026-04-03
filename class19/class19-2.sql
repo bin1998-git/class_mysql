@@ -17,12 +17,14 @@ select * from post;
 select * from like_log;
 
 select
-	p.title,
+	u.nickname as 닉네임, 
+	p.title as 타이틀,
 	count(l.id) as 좋아요수
 from post p
-join like_log l on p.id = l.post_id
-where p.view_count >= 120
-group by p.id, p.title
+join user u on u.id = p.user_id
+left join like_log l on p.id = l.post_id
+where p.view_count >= 200
+group by p.id, p.title, u.nicknamex
 having count(l.id) >= 2
 order by 좋아요수  desc;
 
