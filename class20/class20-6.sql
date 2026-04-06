@@ -10,8 +10,8 @@ select * from product order by id limit 5 offset 5;
 
 select * from category;
 select * from product;
+	
 
-select * from product order by id limit 
 
 
 
